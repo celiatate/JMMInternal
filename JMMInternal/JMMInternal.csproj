@@ -1,0 +1,39 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>   
+    <AddRazorSupportForMvc>true</AddRazorSupportForMvc>   
+    <StartupObject>JMMInternal.Program</StartupObject>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\assets\sass\global\components\base\mixins\" />
+    <Folder Include="wwwroot\assets\sass\global\components\general\mixins\" />
+    <Folder Include="wwwroot\assets\sass\global\components\layout\mixins\" />
+    <Folder Include="wwwroot\assets\sass\global\components\typography\mixins\" />
+    <Folder Include="wwwroot\assets\sass\global\components\widgets\dashboard\" />
+    <Folder Include="wwwroot\assets\sass\global\components\widgets\general\" />
+    <Folder Include="wwwroot\assets\sass\global\integration\frameworks\bootstrap\" />
+    <Folder Include="wwwroot\assets\sass\global\integration\plugins\mixins\" />
+    <Folder Include="wwwroot\assets\sass\global\layout\aside-secondary\" />
+    <Folder Include="wwwroot\assets\sass\global\layout\aside\skins\" />
+    <Folder Include="wwwroot\assets\sass\global\layout\base\" />
+    <Folder Include="wwwroot\assets\sass\global\layout\brand\skins\" />
+    <Folder Include="wwwroot\assets\sass\global\layout\content\" />
+    <Folder Include="wwwroot\assets\sass\global\layout\footer\" />
+    <Folder Include="wwwroot\assets\sass\global\layout\header\skins\base\" />
+    <Folder Include="wwwroot\assets\sass\global\layout\header\skins\menu\" />
+    <Folder Include="wwwroot\assets\sass\pages\blog\" />
+    <Folder Include="wwwroot\assets\sass\pages\error\" />
+    <Folder Include="wwwroot\assets\sass\pages\inbox\" />
+    <Folder Include="wwwroot\assets\sass\pages\invoice\" />
+    <Folder Include="wwwroot\assets\sass\pages\login\" />
+    <Folder Include="wwwroot\assets\sass\pages\pricing\" />
+    <Folder Include="wwwroot\assets\sass\pages\wizards\" />
+  </ItemGroup>
+
+</Project>
