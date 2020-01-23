@@ -1,5 +1,92 @@
 @{
-    ViewData["Title"] = "Home Dashboard";
+    ViewData["Title"] = "Campaigns";
 }
 
-<h1>Campaigns</h1>
+
+
+<div class="row mb-5">
+    <div class="col-md-8 col-12">
+        <h1>Campaigns</h1>
+    </div>
+    <div class="col-md-4 col-12">
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text">
+                    <span class="fa fa-fw fa-filter"></span>
+                </span>
+            </div>
+            <input name="query" data-target-class="search-item" type="text" value="" class="form-control live-search-class-visible" placeholder="Filter List...">
+            <div class="input-group-append">
+                <button class="btn btn-primary clear-live-search-class" type="button" data-target-input="query">
+                    <span class="fa fa-fw fa-times"></span>
+                </button>
+            </div>
+        </div>
+        <p class="text-left text-muted mt-1 mb-0">
+            <span id="query-visible">1</span>
+            /
+            <span id="query-total">1</span>
+            currently visible
+        </p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-12 mt-3 search-item visible">
+        <div class="kt-portlet">
+            <div class="kt-portlet__head">
+                <div class="kt-portlet__head-label">
+                    <span class="kt-portlet__head-icon">
+                        <i class="flaticon2-layers-2"></i>
+                    </span>
+                    <h3 class="kt-portlet__head-title">
+                        Campain Name
+                        <small>Subtitle</small>
+                    </h3>
+                </div>
+                <div class="kt-portlet__head-toolbar">
+                    <div class="kt-portlet__head-group">
+                        <button type="button" class="btn btn-sm btn-outline-warning btn-elevate btn-circle btn-icon"><i class="la la-bar-chart"></i></button>&nbsp;
+                        <button type="button" class="btn btn-sm btn-outline-brand btn-elevate btn-circle btn-icon"><i class="la la-pencil"></i></button>&nbsp;
+                        <button type="button" class="btn btn-sm btn-outline-danger btn-elevate btn-circle btn-icon"><i class="la la-arrow-right"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="kt-portlet__body">
+                <div class="kt-section">
+                    <div class="kt-section__info">
+                        Description and campaign and it's associated data...
+                    </div>
+                    <div class="kt-section__content kt-section__content--border">
+                        <div class="card-deck">
+                            <div class="card">
+                                <div class="kt-bg-metal w-100 kt-padding-t-40 kt-padding-b-40"></div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+                                </div>
+                                <div class="card-footer"><small>Last updated 3 mins ago</small></div>
+                            </div>
+                            <div class="card">
+                                <div class="kt-bg-metal w-100 kt-padding-t-40 kt-padding-b-40"></div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                                </div>
+                                <div class="card-footer"><small>Last updated 3 mins ago</small></div>
+                            </div>
+                            <div class="card">
+                                <div class="kt-bg-metal w-100 kt-padding-t-40 kt-padding-b-40"></div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+                                </div>
+                                <div class="card-footer"><small>Last updated 3 mins ago</small></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- /portlet-->
+    </div><!-- /col-->
+</div><!-- /row-->
