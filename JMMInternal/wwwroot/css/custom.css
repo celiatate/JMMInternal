@@ -3,3 +3,8 @@
     margin-top: 10px;
     opacity: .9;
 }
+
+.float-container{
+    overflow-y:auto;
+    overflow-x:auto;
+}
