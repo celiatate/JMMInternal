@@ -10,9 +10,19 @@ namespace JMMInternal.Controllers
 {
     public class CampaignsController : Controller
     {
-        public IActionResult Index()
+        public IActionResult Index(string id)
         {
             return View();
+        }
+
+        public IActionResult List()
+        {
+            return View();
+        }
+
+        public IActionResult EditDetails(string id)
+        {
+            return PartialView("_EditDetails");
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
