@@ -1,78 +1,332 @@
 @{
-    ViewData["Title"] = "Campaigns";
+    ViewData["Title"] = "Campaign";
 }
 
-<div class="row mb-5">
-    <div class="col-md-8 col-12">
-        <h1>Campaigns</h1>
-    </div>
-    <div class="col-md-4 col-12">
-        <div class="input-group">
-            <div class="input-group-prepend">
-                <span class="input-group-text">
-                    <span class="fa fa-fw fa-filter"></span>
-                </span>
-            </div>
-            <input name="query" data-target-class="search-item" type="text" value="" class="form-control live-search-class-visible" placeholder="Filter List...">
-            <div class="input-group-append">
-                <button class="btn btn-primary clear-live-search-class" type="button" data-target-input="query">
-                    <span class="fa fa-fw fa-times"></span>
-                </button>
-            </div>
-        </div>
-        <p class="text-left text-muted mt-1 mb-0">
-            <span id="query-visible">1</span>
-            /
-            <span id="query-total">1</span>
-            currently visible
-        </p>
+<div class="row mb-4">
+    <div class="col-12">
+        <a href="@Url.Action("List", "Campaigns")">
+            <i class="fa fa-long-arrow-alt-left mr-2"></i>
+            Back to All Campaigns
+        </a>
     </div>
 </div>
 
+<div class="row mb-4">
+    <div class="col-12">
+        <h1>Campaign Name</h1>
+        <p>Description of the campaign. Should be a short description...</p>
+    </div>
+</div>
 <div class="row">
-    <div class="col-12 mt-3 search-item visible">
+    <div class="col-4">
         <div class="kt-portlet">
             <div class="kt-portlet__head">
                 <div class="kt-portlet__head-label">
-                    <span class="kt-portlet__head-icon">
-                        <i class="flaticon2-layers-2"></i>
-                    </span>
                     <h3 class="kt-portlet__head-title">
-                        Campain Name
-                        <small>Subtitle</small>
+                        Campaign Details
                     </h3>
                 </div>
                 <div class="kt-portlet__head-toolbar">
                     <div class="kt-portlet__head-group">
-                        <button type="button" class="btn btn-sm btn-outline-warning btn-elevate btn-circle btn-icon"><i class="la la-bar-chart"></i></button>&nbsp;
-                        <button type="button" class="btn btn-sm btn-outline-brand btn-elevate btn-circle btn-icon"><i class="la la-pencil"></i></button>&nbsp;
-                        <button type="button" class="btn btn-sm btn-outline-danger btn-elevate btn-circle btn-icon"><i class="la la-arrow-right"></i></button>
+                        <button type="button" class="btn btn-sm btn-outline-warning btn-elevate btn-circle btn-icon" onclick="modalAssignment('@(Url.Action("EditDetails", "Campaigns", new {id = "1"}))', 'md')">
+                            <i class="la la-pencil"></i>
+                        </button>
                     </div>
                 </div>
             </div>
             <div class="kt-portlet__body">
-                <div class="kt-section">
-                    <div class="kt-section__info">
-                        <div class="row">
-                            <div class="col-4">
-                                Description and campaign and it's associated data...
-                            </div>
-                            <div class="col-8">
-                                <h4>30 Days Left</h4>
-                                <div class="kt-widget-13__progress">
-                                    <div class="float-container">
-                                        <div class="float-left">01/01/2020</div>
-                                        <div class="float-right">06/15/2020</div>
-                                    </div>
-                                    <div class="progress">
-                                        <div class="progress-bar kt-bg-brand" role="progressbar" style="width: 55%" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                </div>
-                            </div>
+                <div class="kt-list kt-list--badge mb-5">
+                    <div class="kt-list__item">
+                        <span class="kt-list__badge"></span>
+                        <span class="kt-list__icon"><i class="flaticon2-avatar kt-font-success"></i></span>
+                        <span class="kt-list__text">
+                            Kacie Campbell
+                            <span class="float-right"><small>Sponsors</small></span>
+                        </span>
+                    </div>
+                    <div class="kt-list__item">
+                        <span class="kt-list__badge"></span>
+                        <span class="kt-list__icon"><i class="flaticon2-calendar-5 kt-font-danger"></i></span>
+                        <span class="kt-list__text">
+                            Candace Todd
+                            <span class="float-right"><small>Coordinators</small></span>
+                        </span>
+                    </div>
+                    <div class="kt-list__item">
+                        <span class="kt-list__badge"></span>
+                        <span class="kt-list__icon"><i class="flaticon-user-ok kt-font-danger"></i></span>
+                        <span class="kt-list__text">
+                            Terri Bleeker
+                            <span class="float-right"><small>Designer</small></span>
+                        </span>
+                    </div>
+                    <div class="kt-list__item">
+                        <span class="kt-list__badge"></span>
+                        <span class="kt-list__icon"><i class="flaticon-user-ok kt-font-danger"></i></span>
+                        <span class="kt-list__text">
+                            Dar Wood
+                            <span class="float-right"><small>Writer</small></span>
+                        </span>
+                    </div>
+                    <div class="kt-list__item">
+                        <span class="kt-list__badge"></span>
+                        <span class="kt-list__icon"><i class="flaticon-user-ok kt-font-danger"></i></span>
+                        <span class="kt-list__text">
+                            Connor Underwood
+                            <span class="float-right"><small>Web Producer</small></span>
+                        </span>
+                    </div>
+                    <div class="kt-list__item">
+                        <span class="kt-list__badge"></span>
+                        <span class="kt-list__icon"><i class="flaticon-user-ok kt-font-danger"></i></span>
+                        <span class="kt-list__text">
+                            Josh Conrad
+                            <span class="float-right"><small>Web Developer</small></span>
+                        </span>
+                    </div>
+                    <div class="kt-list__item">
+                        <span class="kt-list__badge"></span>
+                        <span class="kt-list__icon"><i class="flaticon2-calendar-1 kt-font-primary"></i></span>
+                        <span class="kt-list__text">
+                            01/01/2020 <i class="fa fa-long-arrow-alt-right mx-2"></i> 06/15/2020
+                            <span class="float-right"><small>Live <i class="fa fa-long-arrow-alt-right mx-2"></i> End</small></span>
+                        </span>
+                    </div>
+                </div>
+                <h3>
+                    Overview
+                    <button type="button" class="float-right btn btn-sm btn-outline-warning btn-elevate btn-circle btn-icon edit-summernote" data-target="campaign-overview">
+                        <i class="la la-pencil"></i>
+                    </button>
+                </h3>
+                <div class="campaign-overview-wrapper mb-3" id="campaign-overview">
+                    <p>Overview would go here...</p>
+                </div>
+            </div>
+        </div><!-- /portlet -->
+        <div class="kt-portlet kt-portlet--tabs">
+            <div class="kt-portlet__head">
+                <div class="kt-portlet__head-label">
+                    <h3 class="kt-portlet__head-title">
+                        Related Links
+                    </h3>
+                </div>
+                <div class="kt-portlet__head-toolbar">
+                    <ul class="nav nav-tabs nav-tabs-bold nav-tabs-line nav-tabs-line-brand" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" data-toggle="tab" href="#internal-links" role="tab" aria-selected="true">
+                                Internal
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#external-links" role="tab" aria-selected="false">
+                                External
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div>
+                <div class="tab-content">
+                    <div class="tab-pane active" id="internal-links" role="tabpanel">
+                        <ul class="kt-nav p-0">
+                            <li class="kt-nav__item">
+                                <a href="" class="kt-nav__link">
+                                    <i class="kt-nav__link-icon flaticon-tool-1"></i>
+                                    <span class="kt-nav__link-text">Wrike Project for Web Tasks</span>
+                                </a>
+                            </li>
+                            <li class="kt-nav__item kt-nav__item--active">
+                                <a href="" class="kt-nav__link">
+                                    <i class="kt-nav__link-icon flaticon-tool-1"></i>
+                                    <span class="kt-nav__link-text">Wrike Project for Print Tasks</span>
+                                </a>
+                            </li>
+                            <li class="kt-nav__item kt-nav__item--active">
+                                <a href="" class="kt-nav__link">
+                                    <i class="kt-nav__link-icon flaticon-tool-1"></i>
+                                    <span class="kt-nav__link-text">Document on Sharepoint</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-pane" id="external-links" role="tabpanel">
+                        <ul class="kt-nav p-0">
+                            <li class="kt-nav__item">
+                                <a href="" class="kt-nav__link">
+                                    <i class="kt-nav__link-icon flaticon-tool-1"></i>
+                                    <span class="kt-nav__link-text">Pinterest Board</span>
+                                </a>
+                            </li>
+                            <li class="kt-nav__item kt-nav__item--active">
+                                <a href="" class="kt-nav__link">
+                                    <i class="kt-nav__link-icon flaticon-tool-1"></i>
+                                    <span class="kt-nav__link-text">Brand Document on Dropbox</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div><!-- /portlet -->
+    </div>
+    <div class="col-8">
+        <div class="kt-portlet">
+            <div class="kt-portlet__head">
+                <div class="kt-portlet__head-label">
+                    <h3 class="kt-portlet__head-title">
+                        Timelines
+                    </h3>
+                </div>
+                <div class="kt-portlet__head-toolbar">
+                    <div class="kt-portlet__head-group">
+                        <button type="button" class="btn btn-sm btn-outline-info btn-elevate btn-circle btn-icon"><i class="la la-calendar"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="kt-portlet__body">
+                <div class="kt-portlet__content">
+                    <h5>Entire Campaign<small class="ml-3">30 Days Left</small></h5>
+                    <div class="kt-widget-13__progress mb-3">
+                        <div class="float-container">
+                            <div class="float-left">01/01/2020</div>
+                            <div class="float-right">06/15/2020</div>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar bg-primary" role="progressbar" style="width: 55%" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                    <h5>Web<small class="ml-3">02/01/2020 - 04/15/2020</small></h5>
+                    <div class="kt-widget-13__progress mb-3">
+                        <div class="progress">
+                            <div class="progress-bar bg-transparent" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+                            <div class="progress-bar bg-success" role="progressbar" style="width: 55%" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                    <h5>Email<small class="ml-3">01/15/2020 - 04/28/2020</small></h5>
+                    <div class="kt-widget-13__progress mb-3">
+                        <div class="progress">
+                            <div class="progress-bar bg-transparent" role="progressbar" style="width: 10%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+                            <div class="progress-bar bg-info" role="progressbar" style="width: 75%" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                    <h5>Socials<small class="ml-3">01/15/2020 - 03/15/2020</small></h5>
+                    <div class="kt-widget-13__progress mb-3">
+                        <div class="progress">
+                            <div class="progress-bar bg-transparent" role="progressbar" style="width: 10%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+                            <div class="progress-bar kt-bg-dark" role="progressbar" style="width: 25%" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                    <h5>Print<small class="ml-3">02/15/2020 - 03/15/2020</small></h5>
+                    <div class="kt-widget-13__progress mb-3">
+                        <div class="progress">
+                            <div class="progress-bar bg-transparent" role="progressbar" style="width: 30%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+                            <div class="progress-bar kt-bg-warning" role="progressbar" style="width: 25%" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                    <h5>TV/Radio<small class="ml-3">02/15/2020 - 02/20/2020</small></h5>
+                    <div class="kt-widget-13__progress mb-3">
+                        <div class="progress">
+                            <div class="progress-bar bg-transparent" role="progressbar" style="width: 30%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+                            <div class="progress-bar bg-dark" role="progressbar" style="width: 5%" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div><!-- /portlet-->
-    </div><!-- /col-->
-</div><!-- /row-->
+        </div><!-- /portlet -->
+
+        <div class="row">
+            <div class="col-12">
+                <div class="kt-portlet">
+                    <div class="kt-portlet__head">
+                        <div class="kt-portlet__head-label">
+                            <h3 class="kt-portlet__head-title">
+                                Campaign URLs
+                            </h3>
+                        </div>
+                        <div class="kt-portlet__head-toolbar">
+                            <div class="kt-portlet__head-group">
+                                Check Links &nbsp;
+                                <button type="button" class="btn btn-sm btn-outline-danger btn-elevate btn-circle btn-icon"><i class="la la-globe"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="kt-portlet__body">
+                        <div class="kt-list kt-list--badge">
+                            <div class="kt-list__item">
+                                <span class="kt-list__badge"></span>
+                                <span class="kt-list__text">
+                                    <a href="javascript:copyToClipboard('https://joycemeyer.org/campaign')" class="kt-link">https://joycemeyer.org/campaign</a>
+                                    <span class="float-right"><small>Web, TV/Radio</small></span>
+                                    <br><small>Description of URL use...</small>
+                                </span>
+                            </div>
+                            <div class="kt-list__item">
+                                <span class="kt-list__badge"></span>
+                                <span class="kt-list__text">
+                                    <a href="javascript:copyToClipboard('https://joycemeyer.org/campaignEmail')" class="kt-link">https://joycemeyer.org/campaignEmail</a>
+                                    <span class="float-right"><small>Email</small></span>
+                                </span>
+                            </div>
+                            <div class="kt-list__item">
+                                <span class="kt-list__badge"></span>
+                                <span class="kt-list__text">
+                                    <a href="javascript:copyToClipboard('https://tiny.url/5e7y4')" class="kt-link">https://tiny.url/5e7y4</a>
+                                    <span class="float-right"><small>Socials</small></span>
+                                    <br><small>Desciption of use of this URL</small>
+                                </span>
+                            </div>
+                            <div class="kt-list__item">
+                                <span class="kt-list__badge"></span>
+                                <span class="kt-list__text">
+                                    <a href="javascript:copyToClipboard('https://joycemeyer.org/campaignPrint')" class="kt-link">https://joycemeyer.org/campaignPrint</a>
+                                    <span class="float-right"><small>Print</small></span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- /portlet -->
+            </div><!-- /col -->
+        </div><!-- /row -->
+        <div class="row">
+            <div class="col-12">
+                <div class="kt-portlet">
+                    <div class="kt-portlet__head">
+                        <div class="kt-portlet__head-label">
+                            <h3 class="kt-portlet__head-title">
+                                Products & Promotions
+                            </h3>
+                        </div>
+                        <div class="kt-portlet__head-toolbar">
+                            <div class="kt-portlet__head-group">
+                                Sync with Sitecore &nbsp;
+                                <button type="button" class="btn btn-sm btn-outline-danger btn-elevate btn-circle btn-icon"><i class="la la-refresh"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="kt-portlet__body">
+                        <div class="jstree-container">
+                            <ul>
+                                <li>Product Name 1
+                                    <ul>
+                                        <li>United States
+                                            <ul>
+                                                <li>Promotion (#1234567) - $10+</li>
+                                            </ul>
+                                        </li>
+                                        <li>Canada</li>
+                                        <li>Australia</li>
+                                        <li>Africa</li>
+                                        <li>Europe</li>
+                                    </ul>
+
+                                </li>
+                                <li>Product 2</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div><!-- /portlet -->
+            </div><!-- /col -->
+        </div><!-- /row -->
+    </div><!-- /col -->
+</div><!-- /row -->
