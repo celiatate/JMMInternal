@@ -1,10 +1,24 @@
-#nav-logo{
-    height: 50px;
-    margin-top: 10px;
-    opacity: .9;
+.nav-logo{
+    height: 30px;
+    margin: 15px 10px 0 0;
+    float:  left;
+}
+.nav-svg{
+    height: 35px;
+    -webkit-filter: invert(100%); /* safari 6.0 - 9.0 */
+    filter: invert(100%);
+    margin-top:6px;
 }
 
 .float-container{
     overflow-y:auto;
     overflow-x:auto;
+}
+
+.kt-aside--minimize .kt-aside__brand .kt-aside__brand-logo object{
+    display:none;
+}
+
+.sn-checkbox-open-in-new-window label input{
+    margin-right:10px;
 }
