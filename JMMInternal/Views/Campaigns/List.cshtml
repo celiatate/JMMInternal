@@ -43,8 +43,10 @@
                 </div>
                 <div class="kt-portlet__head-toolbar">
                     <div class="kt-portlet__head-group">
-                        <button type="button" class="btn btn-sm btn-outline-brand btn-elevate btn-circle btn-icon"><i class="la la-pencil"></i></button>&nbsp;
-                        <a href="@Url.Action("Index", "Campaigns", new {id = "1"})" class="btn btn-sm btn-outline-danger btn-elevate btn-circle btn-icon">
+                        <button type="button" class="btn btn-sm btn-outline-warning btn-elevate btn-circle btn-icon" onclick="modalAssignment('@(Url.Action("EditDetails", "Campaigns", new {id = "1"}))', 'md')">
+                            <i class="la la-pencil"></i>
+                        </button>&nbsp;
+                        <a href="@Url.Action("Index", "Campaigns", new {id = "1"})" class="btn btn-sm btn-outline-primary btn-elevate btn-circle btn-icon">
                             <i class="la la-arrow-right"></i>
                         </a>
                     </div>
